@@ -7,7 +7,7 @@ This application provides a simple and eficient URL shortening service using **A
     - Generates a unique UUID.
     - Stores the UUID and the provided URL in an S3 bucket along with the expiration time.
 
-2. URL Redirector:
+2. [URL Redirector](https://github.com/Gui-Ferraz/RedirectURLShortener):
     - Accepts a GET request with the UUID as the parameter.
     - Checks if the UUID exists in the S3 bucket and verifies the expiration time.
     - If valid, redirects the users to the original URL associated with the UUID.
@@ -78,7 +78,7 @@ The two Lambda functions are seamlessly linked using AWS API Gateaway, enabling 
 
 2. Access the shortened URL through the GET endpoint to test the redirection functionality.
 
-### Future improvements
+## Future improvements
 - Add a front-end interface for users.
 - Implement a "garbage collector" to delete expired URLs.
 - Support custom short URLs.
